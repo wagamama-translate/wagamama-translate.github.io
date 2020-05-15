@@ -1,0 +1,74 @@
+$(function() {
+
+
+    /*-----------------
+    top
+    ------------------*/
+    // タイムライン
+    var timeLine = new TimelineMax();
+
+    //要素
+    var $mainimageArea = $('.mainimage-area');
+    var $aitoha = $('.aitoha_txt');
+    var $mainimage01 = $('.mainimage-area-v01');
+    var $mainimage02 = $('.mainimage-area-v02');
+    var $mainimage03 = $('.mainimage-area-v03');
+    var $mainimage04 = $('.mainimage-area-v04');
+    var $mainimage05 = $('.mainimage-area-v05');
+    var $txt_eng = ['.mainimage-area .txt_what','.mainimage-area .txt_is','.mainimage-area .txt_love','.mainimage-area .txt_hatena'];
+    
+    var $txt_what = $('.mainimage-area .txt_what');
+    var $txt_is = $('.mainimage-area .txt_is');
+    var $txt_love = $('.mainimage-area .txt_love');
+    var $txt_hatena = $('.mainimage-area .txt_hatena');
+
+    var $header = $('#header');
+    var $trailer = $('.trailer');
+
+    TweenMax.set($header, {opacity: '0'});
+    TweenMax.set($trailer, {opacity: '0'});
+
+    $mainimageArea.load(function(){
+        //console.log('load');
+
+    });
+
+    timeLine.to($aitoha, 0.8, {top: '0',opacity: '1'})
+            .to($aitoha, 0.8, {top: '0',opacity: '0'})
+            .to($mainimage01, 0.5, {opacity: '1'}, "-=0.7")
+            .to($mainimage02, 1, {opacity: '1'}, "+=0.1")
+            .to($mainimage03, 1, {opacity: '1.2'}, "-=0.5")
+            .to($mainimage04, 1, {opacity: '1'}, "-=0.5")
+            .to($mainimage05, 1, {opacity: '1'}, "-=0.7")
+
+            .to([$txt_what, $txt_is], 0.5, {marginRight: '0',opacity: '1'})
+            .to([$txt_love, $txt_hatena], 0.5, {marginRight: '0',opacity: '1'}, "-=0.3")
+            .to($trailer, 0.5, {opacity: '1'});
+
+            //.to($txt_love, 0.5, {right: '0',opacity: '1'})
+            //.to($txt_hatena, 0.5, {right: '-8%',opacity: '1'})
+            
+            ////.to($header, 0.5, {opacity: '1'})
+            ////.to($trailer, 0.5, {opacity: '1'});
+
+    TweenMax.to($header, 0.4, {opacity: '1'}).delay(1.1);
+    ////TweenMax.to($trailer, 0.4, {opacity: '1'}).delay(1.1);
+
+
+});
+
+
+jQuery(window).load(function(){
+    jQuery('a[href*="youtube.com/watch"]').magnificPopup({
+       type: 'iframe',
+           iframe: {
+               patterns: {
+                   youtube: {
+                       index: 'youtube.com', 
+                       id: 'v=', 
+                       src: '//www.youtube.com/embed/%id%?rel=0&autoplay=1'
+                    }
+               }
+           }   
+     });      
+});
