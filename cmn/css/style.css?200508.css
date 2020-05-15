@@ -4109,7 +4109,7 @@ SPECIAL
   background-size: cover;
   background-attachment: fixed;*/
   margin: 8em 0 5em;
-  font-family: "Noto Sans JP", "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "Noto Sans SC", "Noto Sans JP", "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 .talk-section:last-child {
   padding-bottom: 0;
@@ -4184,7 +4184,7 @@ SPECIAL
 
 .talk-section .talk .midashi {
   position: relative;
-  font-family: "Noto Serif JP", "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-family: "Noto Serif SC", "Noto Serif JP", "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 2rem;
   color: #000;
   font-weight: 700;
