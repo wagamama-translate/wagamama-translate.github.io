@@ -1,0 +1,3 @@
+[submodule "singyesterday.com"]
+	path = singyesterday.com
+	url = https://github.com/wagamama-translate/singyesterday.com.git
